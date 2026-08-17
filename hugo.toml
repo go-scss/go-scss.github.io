@@ -1,0 +1,27 @@
+baseURL = "https://go-scss.github.io/"
+title = "go-scss"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "404"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  subtitle = "a pure-Go Sass compiler that tracks Dart Sass"
+  description = "A pure-Go, CGO-free Sass/SCSS compiler whose output tracks Dart Sass, the canonical reference implementation. Compiles both the SCSS and indented .sass syntaxes to CSS in expanded and compressed styles, matching dart-sass byte-for-byte on the common real-world surface, and 2-3x faster than dart-sass 1.102 and libsass."
+  tagline = "A <strong>pure-Go Sass/SCSS compiler</strong> whose output tracks <a href=\"https://sass-lang.com\">Dart Sass</a> — no libsass, no Node, no cgo."
+  pills = ["CGO-free", "SCSS + indented .sass", "expanded + compressed", "2–3× faster than dart-sass", "BSD-3-Clause"]
+  primary_role = "compiler"
+  secondary_url = "https://pkg.go.dev/github.com/go-scss/scss"
+  secondary_label = "Go reference"
+  leads = [
+    "Compiles both the <strong>SCSS</strong> and the indented <strong><code>.sass</code></strong> syntaxes, in the <code>expanded</code> and <code>compressed</code> output styles, matching <strong>dart-sass byte-for-byte</strong> on the common real-world surface. Correctness is defined by the reference implementation, not by our own expectations.",
+    "It is also <strong>2–3× faster than dart-sass 1.102 and libsass</strong> on the cross-implementation corpus — measured, with the numbers in <a href=\"https://github.com/go-scss/scss/blob/main/BENCHMARKS.md\">BENCHMARKS.md</a> rather than in a headline."
+  ]
+  principles = "One static Go dependency for static-site generators, asset pipelines and language bindings — the point being that adding Sass support no longer drags in a Node or C toolchain."
+
+[[params.repos]]
+  name = "scss"
+  role = "compiler"
+  reach = "SCSS + .sass → CSS, dart-sass parity"
+  gomod = true
+  result = "<code>scss.CompileString</code> and friends: the whole compiler as an ordinary Go package."
